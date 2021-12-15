@@ -44,11 +44,5 @@ RSpec.describe Passenger do
    charlie.drive
 
    expect(charlie.driver?).to be true
-
  end
-
-
-
-
-
 end
