@@ -7,4 +7,11 @@ RSpec.describe Passenger do
     expect(charlie).to be_instance_of(Passenger)
   end
 
+  it 'Passenger initializes with a name' do
+    charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+
+    expect(charlie.name).to eq("Charlie")
+  end
+
+
 end
