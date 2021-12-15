@@ -19,6 +19,26 @@ RSpec.describe Passenger do
     expect(charlie.age).to eq(18)
   end
 
+  it 'there can be multiple passengers' do
+   charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+   taylor = Passenger.new({"name" => "Taylor", "age" => 12})
+
+   expect(charlie.name).to eq("Charlie")
+   expect(charlie.age).to eq(18)
+   expect(taylor.name).to eq("Taylor")
+   expect(taylor.age).to eq(12)
+ end
+
+ it 'passenger is an adult if 18 or older' do
+   charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+   taylor = Passenger.new({"name" => "Taylor", "age" => 12})
+
+   expect(charlie.adult?).to be true
+   expect(taylor.adult?).to be false
+ end
+
+
+
 
 
 end
