@@ -14,11 +14,15 @@ RSpec.describe Vehicle do
     expect(vehicle.year).to eq("2001")
   end
 
-  xit 'initializes with a make' do
+  it 'initializes with a make' do
     vehicle = Vehicle.new("2001", "Honda", "Civic")
+    
+    expect(vehicle.make).to eq("Honda")
   end
 
-  xit 'initializes with a model' do
+  it 'initializes with a model' do
     vehicle = Vehicle.new("2001", "Honda", "Civic")
+
+    expect(vehicle.model).to eq("Civic")
   end
 end
