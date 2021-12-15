@@ -52,11 +52,13 @@ RSpec.describe Vehicle do
     charlie = Passenger.new({"name" => "Charlie", "age" => 18})
     jude = Passenger.new({"name" => "Jude", "age" => 20})
     taylor = Passenger.new({"name" => "Taylor", "age" => 12})
+
     expect(vehicle.passengers).to eq([])
 
     vehicle.add_passenger(charlie)
 
     expect(vehicle.passengers[0]).to be_instance_of Passenger
+    expect(vehicle.passengers).to eq([charlie])
     expect(vehicle.passengers.first.name).to eq("Charlie")
 
     vehicle.add_passenger(jude)

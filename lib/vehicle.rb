@@ -23,7 +23,6 @@ class Vehicle
 
   def num_adults
     num_adults = 0
-
     @passengers.each do |passenger|
       if passenger.adult? == true
         num_adults += 1

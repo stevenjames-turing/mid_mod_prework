@@ -39,10 +39,12 @@ RSpec.describe Passenger do
 
  it 'Passenger can become a driver' do
    charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+   taylor = Passenger.new({"name" => "Taylor", "age" => 12})
    expect(charlie.driver?).to be false
 
    charlie.drive
 
    expect(charlie.driver?).to be true
+   expect(taylor.driver?).to be false
  end
 end
