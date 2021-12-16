@@ -117,6 +117,7 @@ RSpec.describe Park do
   it 'parks will have different revenues based upon passengers in park' do
     yosemite = Park.new("Yosemite", 12.00)
     yellowstone = Park.new("Yellowstone", 20.00)
+    grand_canyon = Park.new("Grand Canyon", 25.00)
     vehicle_1 = Vehicle.new("2001", "Honda", "Civic")
     vehicle_2 = Vehicle.new("2016", "Ford", "F150")
     charlie = Passenger.new({"name" => "Charlie", "age" => 18})
@@ -132,5 +133,6 @@ RSpec.describe Park do
     expect(yosemite.revenue_generated).to eq(24.00)
     expect(yellowstone.passengers_in_park.count).to eq(1)
     expect(yellowstone.revenue_generated).to eq(20)
+    expect(grand_canyon.revenue_generated).to eq(0)
   end
 end
